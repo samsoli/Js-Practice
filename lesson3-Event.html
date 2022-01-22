@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>lesson, Event</h1>
+  <label>Welcome</label>
+  <label id="lbl">YOUR NAME</label>
+  <br>
+  <input id="fname" type="text" onchange="changeInput()">
+  <br>
+  <button onclick="showName()">Click me</button>
+
+
+
+</body>
+<script>
+  function changeInput() {
+    alert('you change input');
+  }
+  function showName() {
+    var name = document.getElementById("fname").value;
+    document.getElementById('lbl').innerHTML = name;
+  }
+</script>
+
+</html>

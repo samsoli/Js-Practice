@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>lesson, if ... else</h1>
+  <p id="demo"></p>
+</body>
+<script>
+  var hour = new Date().getHours();
+  var message;
+  if (hour < 20) {
+    message = "Good day";
+  } else {
+    message = "Good evening";
+  }
+  document.getElementById("demo").innerHTML = message;
+
+</script>
+
+</html>
