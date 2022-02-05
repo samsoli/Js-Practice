@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function person(Name,Family,Age){
+        this.Name=Name;
+        this.Family=Family;
+        this.Age=Age;
+    }
+    var myperson=new person("ali","akbari",26);
+    myperson.Phone= 41254;
+    myperson.Address="Abadan";
+    var x;
+    var result="";
+    for( x in myperson){
+        result=result+" "+myperson[x];
+    }
+    delete myperson.Address;
+document.write(result);
+myperson.fullName=function(){
+    return this.Name+" "+ this.Family;
+}
+
+</script>
+</html>
