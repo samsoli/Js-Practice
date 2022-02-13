@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>lesson 11 , Creat,Remove,Replace Eleman </h1>
+  <div id="div1">
+    <p id="p1">this is paragraph</p>
+    <p id="p2">this is another paragraph</p><br>
+    <button type="button" id="remove-btn" onclick="remove()">Remove</button>
+    <button type="button" id="replace-btn" onclick="replace()">Replace</button>
+  </div>
+</body>
+<script>
+  //creatNewElement
+  var para = document.createElement("p");
+  var node = document.createTextNode("Hello , this is new paragraph.");
+  para.appendChild(node);
+  var element = document.getElementById("div1");
+  element.appendChild(para);
+  //in declere place -insertBefore-
+  var para2 = document.createElement("p");
+  var node2 = document.createTextNode("Hello , this is new paragraph2.");
+  para2.appendChild(node2);
+  element.appendChild(para2);
+  var child = document.getElementById("p2");
+  element.insertBefore(para, child);
+  //removeChild....
+  function remove() {
+
+    var element = document.getElementById('div1');
+    var pdel = document.getElementById('p1');
+    element.removeChild(pdel);
+  }
+  //replaceChild....
+  function replace() {
+    element.replaceChild(para2,child);
+  }
+</script>
+
+</html>

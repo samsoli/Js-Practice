@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body onload="loadBody()">
+  <h1>lesson 10 , Events </h1>
+  <button onclick="changeText(this)">click me</button>
+  <h1 onclick="changeText(this)">click me </h1><br>
+  <button onclick="displayDate()">date</button>
+  <p id="dtxt">date is ....</p><br>
+  Name is: <input type="text" id="fname" onchange="upper()"><br>
+  <br>
+
+  <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="background-color: blueviolet;width: 120px;height: 20px;padding: 40px;color: white"
+    >
+      Mouse over Me
+    </div><br>
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="background-color: blueviolet;width: 120px;height: 20px;padding: 40px;color: white"
+    >
+     Click Me 
+    </div>
+
+</body>
+<script>
+  function changeText(id) {
+    id.innerHTML = "Ooops ...!";
+  }
+  function displayDate(){
+    document.getElementById("dtxt").innerHTML=Date();
+  }
+  function loadBody(){
+    alert("Plz Wait ....")
+  }
+  function upper() {
+      var fname = document.getElementById("fname");
+      fname.value = fname.value.toUpperCase();
+    }
+    function mOver(obj) {
+      obj.innerHTML = "Thank You !";
+    }
+    function mOut(obj) {
+      obj.innerHTML = "Mouse Over Me !";
+    }
+    function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Release Me !";
+      }
+
+      function mUp(obj) {
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Thank You !";
+      }
+</script>
+
+</html>
